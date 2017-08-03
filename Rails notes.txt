@@ -1,0 +1,6 @@
+
+C: rake moddleware 
+Muestra todos los midlewares que se ejecutan cuando se procesa una peticion en rails
+Casi toda la funcionalidad de controllers se ejecuta con  midlewares   
+
+localhost del projecto http://localhost:3000/
