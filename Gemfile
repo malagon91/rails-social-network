@@ -5,7 +5,7 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
-
+#En este archivo se declaran todas las gemas se que van a usar como el packag.json de npm
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use sqlite3 as the database for Active Record
@@ -32,6 +32,11 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+#Gemas que voy a ir añadiendo en el curso
+gem 'haml-rails'
+gem 'devise' , github:"plataformatec/devise"
+#fin de mis gemas
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

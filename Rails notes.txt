@@ -4,3 +4,30 @@ Muestra todos los midlewares que se ejecutan cuando se procesa una peticion en r
 Casi toda la funcionalidad de controllers se ejecuta con  midlewares   
 
 localhost del projecto http://localhost:3000/
+
+lo bueno de  rails es que tiene generadores de codigo enlisto segun los valla usando 
+
+rails g controller Main home
+    -Genera un controlador con el nombre Main y una accion home
+
+Luego de instalar la gema de devise instalamos la gema con el sig comando 
+    rails generate devise:install
+Creamos un model con la libreria de devise
+    rails g devise User
+Esto genera un modulo de autenticacion para este modelo User 
+por default crea la tabla con campos predefinidos
+
+
+    
+    
+==========================================
+
+Como ya habia revisado haml es una gema que nos ayuda con la maquetacion in html 
+donde solo se necita poner el inicio del objeto y todo lo que van dentro va identado (TABS) 
+es mas facil la escritura de html para evaluar codigo dentro del archivo se usan asi: 
+El guion se usa para asignar una variable 
+ - name = "miguel"
+ el igual dentro de un objeto imprime el valor de la variable 
+ #{name} //Este tambien funciona pero con el si se puede dentro de la misma linea me suena a string interpolation
+ de esta forma tambien se imprime pero debe ser en una linea nueva (identada) si se pone la misma linea no funciona
+  = "Name: " + name
