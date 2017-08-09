@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
+
   devise_for :users, controllers:{
     omniauth_callbacks: "users/omniauth_callbacks"
   }
   #asignamos los retornos de Fb a un controlles amoniauth_callbacks
   #cuando la url sea esta asigna el controller y el metodo asignado
   post "/custom_sign_up", to: "users/omniauth_callbacks#custom_sign_up"
-  root 'main#home'
+ #Modificare las vistas depende si el user ha iniciado sesion o aun no inicia sesion
+  authenticated  :user do
+     root 'main#home'
+  end
+
+  unauthenticated :user do
+    root 'main#unregistered'
+  end
   #root es la que accesedemos en el  index
   #1 Manda la peticion a Fb 
   #2 Fb retorna a nuestra app 

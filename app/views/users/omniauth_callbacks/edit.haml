@@ -1,7 +1,7 @@
 =form_tag "/custom_sign_up", method: :post do
     %ul
         -@user.errors.full_messages.each do |error|
-        %li = error
+            %li = error
     %div
         =text_field_tag "user[username]", @user.username
         %label{for:"user_username"} User name
@@ -13,4 +13,3 @@
         %label{for:"user_name"} Name
     %div
         =submit_tag "Complete"
-  - end

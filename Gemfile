@@ -35,7 +35,10 @@ gem 'jbuilder', '~> 2.5'
 #Gemas que voy a ir añadiendo en el curso
 gem 'haml-rails'
 gem 'devise' , github:"plataformatec/devise"
+
 gem 'omniauth-facebook'
+#con esta gema manejamos el grid
+gem 'flexbox_rb'
 #fin de mis gemas
 
 

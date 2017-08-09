@@ -31,3 +31,6 @@ El guion se usa para asignar una variable
  #{name} //Este tambien funciona pero con el si se puede dentro de la misma linea me suena a string interpolation
  de esta forma tambien se imprime pero debe ser en una linea nueva (identada) si se pone la misma linea no funciona
   = "Name: " + name
+
+Archivo application.css
+*En este archivo se le indica que css se importaran require_tree importa todo lo que esta en el folder es mas recomendable importar uno por uno funciona igual en js
