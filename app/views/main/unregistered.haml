@@ -1,5 +1,9 @@
 .full-height.row.middle-xs.white-text.center-xs.main-background.no-margin
   -#el metodo grid esta emplementado por la gema flexboxgrid
   =grid xs:10,sm:8,md:6,lg:4 do
-    .big-padding.blue.text-left.white-text
-      %h1 Social Network
+    .big-padding.blue.white-text
+      %h1.no-margin.bold.light-blue-text Social Network
+      %p.no-margin Connect and meet other students
+      .top-space
+        =render "devise/registrations/new"
+        -# con la url "devise/registrations/new" mando llamar mi parcial que se llama _new al parecer cuando se llama no es necesario el _

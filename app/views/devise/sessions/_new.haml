@@ -1,0 +1,16 @@
+= form_for(resource,as:resource_name,url:session_path(resource_name)) do |f|
+  =devise_error_messages!
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    = f.email_field :email, autofocus: true,class:"mdl-textfield__input"
+    = f.label :email,class:"mdl-textfield__label grey-text"
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    =f.password_field :password, autofocus: true, class:"mdl-textfield__input"
+    =f.label :password, class:"mdl-textfield__label grey-text"
+  .mdl-textfield.mdl-js-textfield.mdl-textfield--floating-label
+    =f.check_box :remember_me, autofocus: true, class:"mdl-checkbox__input"
+    =f.label :remember_me, class:"mdl-checkbox__label"
+  .top-space.text-center
+    .row.middle-xs
+      =grid xs:12,md:6 do
+        =f.submit "log in",class:"mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+

@@ -1,3 +1,10 @@
 // Place all the styles related to the Main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.main-background{
+  //Aqui podemos interpolar la url con codigo de rails con la funcion asset_path llegamos al folder assets y ahi  indicamos que queremos la imagen
+  //con el nombre de backgorund.jpg
+  background-image: url(#{asset_path('background.jpg')});
+  background-size: cover;
+  background-repeat: none;
+}

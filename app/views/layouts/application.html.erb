@@ -3,14 +3,21 @@
   <head>
     <title>RailsSocial</title>
     <%= csrf_meta_tags %>
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />      
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
     <!-- con esta lina pinta las noticias que enviemos desde la app-->
-    <p><%= notice %><%= alert %></p>
-    <%= yield %>
+    <!-- Le agregamos la etiqueta style para hacer un hack en donde cuando no halla notices o alerts no muestre el parrafo en el maquetado-->
+    <p style="<%= 'display:none;' if notice.nil? && alert.nil?  %>"><%= notice %><%= alert %></p>
+    <div class="mdl-layout mdl-js-layout">
+      <%=	 render "partials/nav" %>
+      <main class="mdl-layout__content">
+        <div class="page-content"><%= yield %></div>
+      </main>
+    </div>
   </body>
 </html>

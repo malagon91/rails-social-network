@@ -1,0 +1,23 @@
+$colors: (
+  red: #FC4349,
+  pink: #E4004F,
+  blue: #2C3E50,
+  grey: #D7DADB,
+  dark-grey: #666,
+  light-blue: #6DBCDB,
+  white: #fff,
+  indigo: #2F33AC,
+  black: #000
+);
+
+//En sass podemos crear clases dinamicas por medio de foreach en este ejemplo tengo mi objeto de colores y por cada color creo una clase con dicho color
+//Esto nos ayuda a tener menos codigo en el ejemplo creamos clases con el background color y el color del texto de cada color en el arreglo
+//Si queremos mas clases solo agrego los colores en el objeto
+@each $color_name,$color in $colors{
+  .#{$color_name}{
+    background-color: $color;
+  }
+  .#{$color_name}-text{
+    color: $color;
+  }
+}

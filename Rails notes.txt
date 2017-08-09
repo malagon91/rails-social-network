@@ -34,3 +34,8 @@ El guion se usa para asignar una variable
 
 Archivo application.css
 *En este archivo se le indica que css se importaran require_tree importa todo lo que esta en el folder es mas recomendable importar uno por uno funciona igual en js
+
+
+Parciales:
+son componentes que se usaran en diferentes partes del sitio por ejemplo
+los parciales se identifican por iniciar con un guion bajo  se pueden importar con diferentes vistas
