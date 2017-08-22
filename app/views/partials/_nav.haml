@@ -1,16 +1,16 @@
 %header.mdl-layout__header.mdl-layout__header--scroll
   .mdl-layout__header-row
-    %span.mdl-layout-title title
+    %span.mdl-layout-title Social network
     .mdl-layout-spacer
     %nav.mdl-navigation
-      %a.mdl-navigation__link{href=""} Link
-      %a.mdl-navigation__link{href=""} Link
-      %a.mdl-navigation__link{href=""} Link
-      %a.mdl-navigation__link{href=""} Link
+      //Los links de aqui son los que aparecen en el head de la pantalla
+      //Resource es el user
+      // registro = sesion
+      // el metodo lo agrega como un valor dentro de la etiqueta y ahi un archivo js para este tipo de eventos
+      -if user_signed_in?
+        =link_to "Log out",  destroy_user_session_path, method: :delete, class: "white-text"
 .mdl-layout__drawer
-  %span.mdl-layout-title Title
+  %span.mdl-layout-title Social network
   %nav.mdl-navigation
-    %a.mdl-navigation__link{href=""} Link
-    %a.mdl-navigation__link{href=""} Link
-    %a.mdl-navigation__link{href=""} Link
-    %a.mdl-navigation__link{href=""} Link
+    //Los links de aqui son los que aparecen en el menu lateral
+    =link_to "My custom link",  "localhost:3000", class: "white-text"

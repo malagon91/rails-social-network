@@ -23,7 +23,7 @@ por default crea la tabla con campos predefinidos
 ==========================================
 
 Como ya habia revisado haml es una gema que nos ayuda con la maquetacion in html 
-donde solo se necita poner el inicio del objeto y todo lo que van dentro va identado (TABS) 
+donde solo se necita poner el inicio del objeto y t0odo lo que van dentro va identado (TABS)
 es mas facil la escritura de html para evaluar codigo dentro del archivo se usan asi: 
 El guion se usa para asignar una variable 
  - name = "miguel"
@@ -33,9 +33,30 @@ El guion se usa para asignar una variable
   = "Name: " + name
 
 Archivo application.css
-*En este archivo se le indica que css se importaran require_tree importa todo lo que esta en el folder es mas recomendable importar uno por uno funciona igual en js
+*En este archivo se le indica que css se importaran require_tree importa to0do lo que esta en el folder es mas recomendable importar uno por uno funciona igual en js
 
 
 Parciales:
 son componentes que se usaran en diferentes partes del sitio por ejemplo
 los parciales se identifican por iniciar con un guion bajo  se pueden importar con diferentes vistas
+
+
+
+Despues de instalar la gema gem 'rspec-rails',"~>  3.5.0.beta1"  necesitamos correr despues un comando para ejecutar las pruebas
+ comando rails generate rspec:install
+
+ rails generate rspec:model User
+ Crea el archivo de test para el modelo User
+
+ Test Driven Development:
+    *  Add a test
+    *   Run all tests and see if the new one fails
+    *   Write some code
+    *   Run tests
+    *   Refactor code
+    *   Repeat
+
+
+
+
+

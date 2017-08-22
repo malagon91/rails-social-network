@@ -48,6 +48,12 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # My gems
+  gem 'shoulda-matchers' # Metodos de ayuda específicos
+  gem 'rspec-rails',"~>  3.5.0.beta1" # Framework pruebas
+  gem "factory_girl_rails", "~> 4.0" # Nos permite crear objetos de la BD para pruebas
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug'
 end
 
 group :development do
